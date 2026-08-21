@@ -1,0 +1,217 @@
+.section {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-tight-display);
+  color: var(--text-primary);
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionSubtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--weight-body);
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
+}
+
+/* Simulation Console Grid */
+.consoleGrid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+
+.scenarioPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panelLabel {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.scenarioCard {
+  padding: 1.25rem;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scenarioCard:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.scenarioCardActive {
+  background-color: rgba(243, 115, 56, 0.08);
+  border-color: var(--color-light-orange);
+  box-shadow: 0 0 24px rgba(243, 115, 56, 0.15);
+}
+
+.scenarioTitle {
+  font-size: 0.9375rem;
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scenarioDesc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Active Simulation Display */
+.simulationDisplay {
+  background-color: #07080c;
+  border: 1px solid var(--border-card);
+  border-radius: 28px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hudTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.statusIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  font-weight: var(--weight-medium);
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.statusRunning {
+  background-color: var(--color-light-orange);
+  box-shadow: 0 0 12px var(--color-light-orange);
+  animation: beaconPing 1.5s infinite;
+}
+
+.statusResolved {
+  background-color: var(--color-shield-green);
+  box-shadow: 0 0 12px var(--color-shield-green);
+}
+
+/* Steps Visual Progression */
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.timelineCard {
+  background-color: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all var(--transition-normal);
+}
+
+.timelineCardActive {
+  border-color: var(--color-light-orange);
+  background-color: rgba(243, 115, 56, 0.05);
+}
+
+.timelineCardComplete {
+  border-color: rgba(0, 229, 153, 0.4);
+  background-color: rgba(0, 229, 153, 0.04);
+}
+
+.stepNumber {
+  font-size: 0.6875rem;
+  font-weight: var(--weight-bold);
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.stepTitle {
+  font-size: 0.875rem;
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.stepStatus {
+  font-size: 0.75rem;
+  font-family: var(--font-family-mono);
+  color: var(--color-shield-green);
+}
+
+/* Terminal Log View */
+.logTerminal {
+  background-color: #030406;
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 1.25rem;
+  font-family: var(--font-family-mono);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: #a1a7b8;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+@media (max-width: 960px) {
+  .consoleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .timelineGrid {
+    grid-template-columns: 1fr;
+  }
+}

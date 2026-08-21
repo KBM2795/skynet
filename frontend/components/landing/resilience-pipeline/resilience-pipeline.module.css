@@ -1,0 +1,207 @@
+.section {
+  padding: 8rem 0;
+  background-color: #0b0d13;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.headerContent {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 4.5rem auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-tight-display);
+  color: var(--text-primary);
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionSubtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--weight-body);
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
+}
+
+/* Stage Navigation Tabs */
+.stageTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.stageTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-tight-button);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.stageTab:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
+
+.stageTabActive {
+  background-color: #ffffff;
+  color: #090a0e;
+  border-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.stageIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.stageTabActive .stageIndex {
+  background-color: #090a0e;
+  color: #ffffff;
+}
+
+/* Stage Showcase Container (Stadium) */
+.showcaseFrame {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  padding: 3rem;
+  align-items: center;
+}
+
+.stageInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.stageBadge {
+  font-family: var(--font-family-primary);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--color-light-orange);
+  text-transform: uppercase;
+}
+
+.stageTitle {
+  font-family: var(--font-family-primary);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: var(--weight-medium);
+  line-height: 1.2;
+  letter-spacing: var(--tracking-tight-display);
+  color: var(--text-primary);
+}
+
+.stageDescription {
+  font-size: 1rem;
+  font-weight: var(--weight-body);
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.featureIcon {
+  color: var(--color-shield-green);
+  flex-shrink: 0;
+}
+
+/* Visual Stage Simulation Screen */
+.stageScreen {
+  background-color: #08090d;
+  border: 1px solid var(--border-card);
+  border-radius: 28px;
+  padding: 1.75rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.screenHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.screenDots {
+  display: flex;
+  gap: 6px;
+}
+
+.screenDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.terminalCode {
+  font-family: var(--font-family-mono);
+  font-size: 0.8125rem;
+  color: #a0a6b8;
+  line-height: 1.7;
+}
+
+.codeGreen {
+  color: var(--color-shield-green);
+}
+
+.codeOrange {
+  color: var(--color-light-orange);
+}
+
+.codeCyan {
+  color: var(--color-cyber-cyan);
+}
+
+@media (max-width: 960px) {
+  .showcaseFrame {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}

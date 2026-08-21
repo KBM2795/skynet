@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "../styles/colors.css";
+@import "../styles/fonts.css";
+@import "../styles/variables.css";
+@import "../styles/animations.css";
+
+/* Base Resets & Global Theme */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    color-scheme: dark;
+    background-color: var(--bg-canvas);
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: var(--font-family-primary);
+    font-weight: var(--weight-body);
+    line-height: var(--leading-body);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-light-orange);
+    color: #ffffff;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-canvas);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-card);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-light-orange);
+  }
+}
+
+/* Common Container Utility */
+.skynet-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+}
+
+.section-padding {
+  padding-top: var(--section-spacing-y);
+  padding-bottom: var(--section-spacing-y);
+}

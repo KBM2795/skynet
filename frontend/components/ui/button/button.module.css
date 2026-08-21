@@ -1,0 +1,116 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-tight-button);
+  border-radius: var(--radius-button);
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  outline: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary Ink Pill (Mastercard Inspired: Light pill on dark canvas) */
+.primary {
+  background-color: var(--cta-ink-bg);
+  color: var(--cta-ink-text);
+  border-color: var(--cta-ink-bg);
+  box-shadow: 0 4px 16px rgba(244, 242, 238, 0.15);
+}
+
+.primary:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(244, 242, 238, 0.25);
+}
+
+/* Secondary Outlined Pill */
+.secondary {
+  background-color: var(--cta-secondary-bg);
+  color: var(--cta-secondary-text);
+  border-color: var(--cta-secondary-border);
+  backdrop-filter: blur(12px);
+}
+
+.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Signal Orange Pill (Alert / Consent / Action) */
+.signal {
+  background-color: var(--color-signal-orange);
+  color: #ffffff;
+  border-color: var(--color-signal-orange);
+  border-radius: var(--radius-consent);
+  padding: 6px 28px;
+  font-size: var(--font-size-sm);
+  box-shadow: var(--shadow-glow-orange);
+}
+
+.signal:hover {
+  background-color: var(--color-light-orange);
+  border-color: var(--color-light-orange);
+  box-shadow: 0 0 24px rgba(243, 115, 56, 0.4);
+}
+
+/* Glow Pill (Cyan Trust / Special Action) */
+.glow {
+  background-color: var(--color-light-orange);
+  color: #ffffff;
+  border-color: var(--color-light-orange);
+  box-shadow: var(--shadow-glow-orange);
+}
+
+.glow:hover {
+  background-color: #ff854d;
+  box-shadow: 0 0 32px rgba(243, 115, 56, 0.5);
+}
+
+/* Ghost Pill */
+.ghost {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border-color: transparent;
+}
+
+.ghost:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Sizes */
+.sm {
+  padding: 6px 16px;
+  font-size: var(--font-size-sm);
+}
+
+.md {
+  padding: 8px 24px;
+  font-size: var(--font-size-body);
+}
+
+.lg {
+  padding: 12px 32px;
+  font-size: 1.125rem;
+  border-radius: var(--radius-stadium);
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}

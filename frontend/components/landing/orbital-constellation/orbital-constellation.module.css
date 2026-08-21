@@ -1,0 +1,191 @@
+.section {
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family-primary);
+  font-size: clamp(6rem, 16vw, 14rem);
+  font-weight: var(--weight-medium);
+  letter-spacing: -0.04em;
+  color: var(--text-ghost);
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  z-index: var(--z-watermark);
+}
+
+.headerContent {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 5rem auto;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.sectionTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-tight-display);
+  color: var(--text-primary);
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionSubtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--weight-body);
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
+}
+
+/* Constellation Container */
+.constellationGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  z-index: var(--z-content);
+}
+
+.nodeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: transform var(--transition-normal);
+}
+
+.nodeCard:hover {
+  transform: translateY(-8px);
+}
+
+/* Perfect Circular Portrait Node */
+.circlePortraitWrapper {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin-bottom: 2rem;
+}
+
+.circlePortrait {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-circle);
+  background: radial-gradient(circle at 35% 35%, #1f2433 0%, #11131a 80%);
+  border: 1.5px solid var(--border-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.nodeCard:hover .circlePortrait {
+  border-color: rgba(243, 115, 56, 0.5);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 24px rgba(243, 115, 56, 0.2);
+}
+
+.portraitIconWrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-circle);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  color: var(--color-light-orange);
+  transition: transform var(--transition-fast);
+}
+
+.nodeCard:hover .portraitIconWrapper {
+  transform: scale(1.1);
+  color: #ffffff;
+  background-color: var(--color-signal-orange);
+}
+
+.portraitMetric {
+  font-size: 1.125rem;
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.portraitMetricLabel {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Docked Satellite CTA */
+.dockedSatellite {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(10%, 10%);
+}
+
+.nodeTextGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 260px;
+}
+
+.nodeEyebrow {
+  font-family: var(--font-family-primary);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-light-orange);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nodeTitle {
+  font-family: var(--font-family-primary);
+  font-size: 1.35rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-tight-display);
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.nodeDescription {
+  font-size: 0.875rem;
+  font-weight: var(--weight-body);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+  .constellationGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .constellationGrid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}

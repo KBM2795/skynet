@@ -1,0 +1,40 @@
+.stadium {
+  border-radius: var(--radius-stadium);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-stadium);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.glowOrange {
+  border-color: rgba(243, 115, 56, 0.35);
+  box-shadow: var(--shadow-stadium), var(--shadow-glow-orange);
+}
+
+.glowCyan {
+  border-color: rgba(0, 210, 255, 0.35);
+  box-shadow: var(--shadow-stadium), var(--shadow-glow-cyan);
+}
+
+.glass {
+  background-color: var(--bg-surface-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.innerGlow {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}

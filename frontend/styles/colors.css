@@ -1,0 +1,59 @@
+/**
+ * Skynet Design System - Global Color Tokens (Dark Theme)
+ * Inspired by Mastercard aesthetic rules & Cyber Resilience System Architecture
+ */
+
+:root {
+  /* Canvas & Background Surfaces */
+  --bg-canvas: #090a0e;
+  --bg-surface: #111319;
+  --bg-surface-elevated: #171a23;
+  --bg-surface-card: #141720;
+  --bg-surface-glass: rgba(17, 19, 25, 0.78);
+  --bg-surface-pill: rgba(25, 29, 39, 0.85);
+
+  /* Primary Editorial Neutrals */
+  --text-primary: #f4f2ee;
+  --text-secondary: #9fa4b2;
+  --text-muted: #636979;
+  --text-dim: #444a59;
+  --text-ghost: rgba(244, 242, 238, 0.035);
+
+  /* Signal & Accent Palette */
+  --color-signal-orange: #cf4500;
+  --color-light-orange: #f37338;
+  --color-clay-brown: #9a3a0a;
+  --color-cyber-cyan: #00d2ff;
+  --color-trust-blue: #3860be;
+  --color-shield-green: #00e599;
+  --color-alert-amber: #f79e1b;
+  --color-threat-red: #eb001b;
+
+  /* Strokes & Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-card: #252936;
+  --border-highlight: rgba(243, 115, 56, 0.4);
+
+  /* CTAs & Interactive */
+  --cta-ink-bg: #f4f2ee;
+  --cta-ink-text: #090a0e;
+  --cta-secondary-bg: rgba(255, 255, 255, 0.06);
+  --cta-secondary-border: rgba(255, 255, 255, 0.16);
+  --cta-secondary-text: #f4f2ee;
+  --cta-signal-bg: #cf4500;
+  --cta-signal-text: #ffffff;
+
+  /* Satellite & Micro-CTAs */
+  --satellite-bg: #ffffff;
+  --satellite-icon: #090a0e;
+  --satellite-hover-bg: #f37338;
+  --satellite-hover-icon: #ffffff;
+
+  /* Depth & Atmospheric Shadows */
+  --shadow-nav: 0 4px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-stadium: 0 24px 64px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-card: 0 16px 40px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-glow-orange: 0 0 36px -6px rgba(243, 115, 56, 0.28);
+  --shadow-glow-cyan: 0 0 36px -6px rgba(0, 210, 255, 0.24);
+}

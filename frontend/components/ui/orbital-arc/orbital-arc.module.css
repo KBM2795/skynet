@@ -1,0 +1,24 @@
+.arcWrapper {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.path {
+  stroke: var(--color-light-orange);
+  stroke-width: 1.5px;
+  stroke-linecap: round;
+  fill: none;
+  opacity: 0.65;
+  transition: opacity var(--transition-normal);
+}
+
+.animated {
+  stroke-dasharray: 8 6;
+  animation: dashFlow 3s linear infinite;
+}
+
+.glow {
+  filter: drop-shadow(0 0 8px rgba(243, 115, 56, 0.5));
+}

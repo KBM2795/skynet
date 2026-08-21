@@ -1,0 +1,65 @@
+.section {
+  padding: 6rem 0 8rem 0;
+  position: relative;
+}
+
+.stadiumCard {
+  background: radial-gradient(circle at 50% 0%, #1f2535 0%, #0e1017 100%);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-stadium);
+  padding: clamp(3rem, 6vw, 5.5rem) clamp(1.5rem, 4vw, 4rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-stadium), var(--shadow-glow-orange);
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-tight-display);
+  color: var(--text-primary);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.description {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: var(--weight-body);
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
+  margin-bottom: 2.5rem;
+}
+
+.btnGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bgOrbitalGlow {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(243, 115, 56, 0.2) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
