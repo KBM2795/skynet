@@ -43,15 +43,12 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
         >
           {/* Brand */}
           <a href="#" className={styles.brandGroup}>
-            <div className={styles.logoOrb}>
-              <div className={styles.logoInnerDot} />
-            </div>
             <div className="flex items-center gap-2">
-              <span className={styles.brandName}>SKYNET</span>
-              <span className={styles.statusTag}>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00e599] animate-pulse" />
-                Resilience V2.4
-              </span>
+              <img
+                src="skynet.png"
+                alt="Skynet"
+                className="h-5.5 w-auto"
+              />
             </div>
           </a>
 
@@ -69,20 +66,12 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
           {/* Nav Actions */}
           <div className={styles.navActions}>
             <Button
-              variant="secondary"
-              size="sm"
-              href="#simulation"
-              className="hidden sm:inline-flex"
-            >
-              Demo HUD
-            </Button>
-            <Button
               variant="primary"
               size="sm"
-              href="#deploy"
+              href="#Start"
               icon={<ArrowRight size={14} />}
             >
-              Deploy
+              Start
             </Button>
 
             {/* Mobile Hamburger */}
