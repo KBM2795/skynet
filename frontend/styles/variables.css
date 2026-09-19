@@ -1,10 +1,10 @@
 /**
- * Skynet Design System - Layout, Spacing, and Geometry Variables
- * Adhering to the 8px grid and Mastercard 3-tier radius scale (20px, 40px, 999px)
+ * Skynet Design System - Layout, Spacing, and Geometry Variables (Luma Style)
+ * Rounded contours, pill-shaped controls, and breathable 8px spacing scale
  */
 
 :root {
-  /* Spacing System (8px Grid Scale) */
+  /* Spacing Scale (8px Grid) */
   --space-1: 0.25rem;  /* 4px */
   --space-2: 0.5rem;   /* 8px */
   --space-3: 0.75rem;  /* 12px */
@@ -15,20 +15,23 @@
   --space-10: 2.5rem;  /* 40px */
   --space-12: 3rem;    /* 48px */
   --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
   --space-24: 6rem;    /* 96px */
-  --space-32: 8rem;    /* 128px */
 
-  /* Mastercard Radius Scale */
-  --radius-button: 20px;       /* Primary and secondary button pills */
-  --radius-consent: 24px;      /* Consent/alert pills */
-  --radius-stadium: 40px;      /* Hero frame, large card containers, feature stages */
-  --radius-pill: 999px;        /* Floating nav, category chips, badges */
-  --radius-circle: 50%;        /* Orbital portrait nodes, satellite CTAs */
+  /* Luma Radius Scale */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-card: 20px;
+  --radius-card-lg: 24px;
+  --radius-section: 32px;
+  --radius-pill: 9999px;
+  --radius-circle: 50%;
 
-  /* Layout Containers */
-  --container-max-width: 1280px;
-  --container-gutter: clamp(1.25rem, 4vw, 3rem);
-  --section-spacing-y: clamp(4rem, 8vw, 8rem);
+  /* Containers */
+  --container-max-width: 1240px;
+  --container-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-spacing-y: clamp(4.5rem, 8vw, 7.5rem);
 
   /* Transitions */
   --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
@@ -37,9 +40,8 @@
 
   /* Z-Index Layers */
   --z-background: 0;
-  --z-watermark: 1;
   --z-content: 10;
-  --z-floating-nav: 50;
+  --z-floating: 20;
+  --z-sticky-nav: 50;
   --z-modal: 100;
-  --z-toast: 200;
 }

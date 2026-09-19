@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Shield, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, ShieldCheck } from "lucide-react";
 
 export interface NavbarProps {
   className?: string;
@@ -23,11 +23,12 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
   }, []);
 
   const navLinks = [
-    { label: "Overview", href: "#overview" },
-    { label: "Core Architecture", href: "#constellation" },
-    { label: "Resilience Engine", href: "#pipeline" },
-    { label: "Live Simulation", href: "#simulation" },
-    { label: "Trust & Metrics", href: "#metrics" },
+    { label: "Platform", href: "#platform" },
+    { label: "Features", href: "#features" },
+    { label: "Architecture", href: "#architecture" },
+    { label: "Analytics", href: "#analytics" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "FAQ", href: "#faq" },
   ];
 
   return (
@@ -43,13 +44,12 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
         >
           {/* Brand */}
           <a href="#" className={styles.brandGroup}>
-            <div className="flex items-center gap-2">
               <img
-                src="skynet.png"
-                alt="Skynet"
-                className="h-5.5 w-auto"
+                src="/skynet_dark.png"
+                alt="SkyNet Logo"
+                className="h-5 w-auto"
               />
-            </div>
+            
           </a>
 
           {/* Desktop Nav Links */}
@@ -65,23 +65,25 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
 
           {/* Nav Actions */}
           <div className={styles.navActions}>
+            <a href="#login" className={styles.signInBtn}>
+              Sign In
+            </a>
             <Button
               variant="primary"
               size="sm"
-              href="#Start"
-              icon={<ArrowRight size={14} />}
+              href="#get-started"
+              icon={<ArrowRight className="w-3.5 h-3.5 ml-1" />}
+              iconPosition="right"
             >
-              Start
+              Get Started
             </Button>
 
-            {/* Mobile Hamburger */}
             <button
-              type="button"
               className={styles.mobileMenuBtn}
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle Menu"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
-              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+              {mobileOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
             </button>
           </div>
         </nav>
@@ -103,14 +105,24 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
               </li>
             ))}
           </ul>
-          <div className="pt-2 flex flex-col gap-2">
+          <div className="pt-3 border-t border-slate-200 flex flex-col gap-2">
+            <Button
+              variant="secondary"
+              size="md"
+              href="#login"
+              onClick={() => setMobileOpen(false)}
+            >
+              Sign In
+            </Button>
             <Button
               variant="primary"
               size="md"
-              href="#deploy"
+              href="#get-started"
+              icon={<ArrowRight className="w-4 h-4 ml-1" />}
+              iconPosition="right"
               onClick={() => setMobileOpen(false)}
             >
-              Deploy Resilience
+              Deploy SkyNet Free
             </Button>
           </div>
         </div>
