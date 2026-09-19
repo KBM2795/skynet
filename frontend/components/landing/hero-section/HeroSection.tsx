@@ -48,9 +48,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         {/* Editorial Text Centerpiece */}
         <div className={styles.heroContent}>
           <div className={styles.eyebrowWrapper}>
-            <PillBadge dotColor="orange" isPulsing>
-              INTELLIGENT CYBER RESILIENCE
-            </PillBadge>
+            {/* <PillBadge dotColor="orange" isPulsing>
+              SKYNET
+            </PillBadge> */}
           </div>
 
           <h1 className={styles.heroTitle}>

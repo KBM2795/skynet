@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skynet | Intelligent Cyber Resilience Platform",
+  title: "Skynet",
   description:
     "Autonomous protection and uninterrupted service availability through real-time anomaly detection, risk assessment, and trust-based mitigation.",
   keywords: [
@@ -33,10 +33,8 @@ export const metadata: Metadata = {
     "Zero-Downtime Infrastructure",
   ],
   authors: [{ name: "Skynet Resilience Team" }],
-  openGraph: {
-    title: "Skynet | Intelligent Cyber Resilience Platform",
-    description:
-      "Detect threats, assess risks, and autonomously respond to incidents while maintaining continuous availability.",
+openGraph: {
+    title: "Skynet Detect threats, assess risks, and autonomously respond to incidents while maintaining continuous availability.",
     type: "website",
   },
 };
