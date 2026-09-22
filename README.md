@@ -7,7 +7,6 @@
 <p align="center">
   <strong>Autonomous Cyber Resilience, Real-Time Threat Detection & Automated Incident Remediation</strong>
 </p>
-
 <p align="center">
   <a href="#overview"><img src="https://img.shields.io/badge/Platform-SkyNet-blue?style=flat-square" alt="Platform" /></a>
   <a href="#tech-stack"><img src="https://img.shields.io/badge/Frontend-Next.js%2016-black?style=flat-square&logo=next.js" alt="Next.js" /></a>
