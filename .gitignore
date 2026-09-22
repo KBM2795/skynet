@@ -1,0 +1,164 @@
+# ═══════════════════════════════════════════════════════════
+#  SkyNet — Root .gitignore
+#  Covers: Next.js · Go · FastAPI (Python)
+# ═══════════════════════════════════════════════════════════
+
+# ──────────────────────────────────────────────────────────
+#  OS & Editor
+# ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# ──────────────────────────────────────────────────────────
+#  Environment & Secrets
+# ──────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+secrets/
+credentials.json
+
+# ──────────────────────────────────────────────────────────
+#  Next.js / Node.js  (frontend/)
+# ──────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+build/
+dist/
+.turbo/
+.vercel/
+.netlify/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+*.tsbuildinfo
+next-env.d.ts
+.eslintcache
+.stylelintcache
+coverage/
+storybook-static/
+
+# ──────────────────────────────────────────────────────────
+#  Go  (backend/)
+# ──────────────────────────────────────────────────────────
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+backend/backend
+backend/bin/
+backend/tmp/
+
+# Test & profiling
+*.test
+*.prof
+*.out
+coverage.txt
+coverage.html
+
+# Dependency & build caches (local)
+vendor/
+
+# Air live-reload temp directory
+backend/tmp/
+
+# ──────────────────────────────────────────────────────────
+#  FastAPI / Python  (ai-engine/)
+# ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Distribution & packaging
+*.egg-info/
+*.egg
+dist/
+build/
+sdist/
+wheels/
+*.whl
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Type checkers & linters
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Model files & data (large binaries)
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.bin
+*.gguf
+*.ggml
+
+# ──────────────────────────────────────────────────────────
+#  Docker
+# ──────────────────────────────────────────────────────────
+docker-compose.override.yml
+.docker/
+
+# ──────────────────────────────────────────────────────────
+#  Database & Logs
+# ──────────────────────────────────────────────────────────
+*.sqlite3
+*.db
+*.log
+logs/
+
+# ──────────────────────────────────────────────────────────
+#  Misc
+# ──────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.temp
+.cache/
+local.yaml

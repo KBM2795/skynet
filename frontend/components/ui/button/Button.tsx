@@ -33,9 +33,13 @@ export const Button: React.FC<ButtonProps> = ({
 
   const content = (
     <>
-      {icon && iconPosition === "left" && <span className="inline-flex shrink-0">{icon}</span>}
-      <span>{children}</span>
-      {icon && iconPosition === "right" && <span className="inline-flex shrink-0">{icon}</span>}
+      {icon && iconPosition === "left" && (
+        <span className="inline-flex items-center justify-center shrink-0">{icon}</span>
+      )}
+      <span className="inline-flex items-center justify-center gap-2">{children}</span>
+      {icon && iconPosition === "right" && (
+        <span className="inline-flex items-center justify-center shrink-0">{icon}</span>
+      )}
     </>
   );
 

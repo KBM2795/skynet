@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Sofia_Sans, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/lib/auth/AuthContext";
 
 const sofiaSans = Sofia_Sans({
   variable: "--font-sofia-sans",
@@ -21,26 +22,26 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skynet",
+  title: "SkyNet — Autonomous Cyber Defense & Zero-Day Isolation",
   description:
-    "Autonomous protection and uninterrupted service availability through real-time anomaly detection, risk assessment, and trust-based mitigation.",
+    "Next-Gen Cyber Resilience. Continuous zero-day threat isolation, AI-orchestrated defense pipelines, and sub-millisecond telemetry across multi-cloud and Kubernetes infrastructure.",
   keywords: [
     "Cyber Resilience",
     "Threat Detection",
     "Autonomous Security",
-    "Trust Evaluation",
+    "Zero-Day Defense",
     "Incident Response",
-    "Zero-Downtime Infrastructure",
+    "Cloud Telemetry",
   ],
-  authors: [{ name: "Skynet Resilience Team" }],
-openGraph: {
-    title: "Skynet Detect threats, assess risks, and autonomously respond to incidents while maintaining continuous availability.",
+  authors: [{ name: "SkyNet Technologies" }],
+  openGraph: {
+    title: "SkyNet — Next-Gen Cyber Defense Powered by Autonomous AI",
     type: "website",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#090a0e",
+  themeColor: "#2563EB",
 };
 
 export default function RootLayout({
@@ -51,10 +52,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sofiaSans.variable} ${inter.variable} ${jetbrainsMono.variable} dark h-full antialiased`}
+      className={`${sofiaSans.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#090a0e] text-[#f4f2ee]">
-        {children}
+      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-slate-900">
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
